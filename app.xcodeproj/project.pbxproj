@@ -15,6 +15,9 @@
 		A0F788572153C3F8000B97F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F788562153C3F8000B97F6 /* main.m */; };
 		A0F788612153C3F8000B97F6 /* appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F788602153C3F8000B97F6 /* appTests.m */; };
 		A0F7886C2153C3F8000B97F6 /* appUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F7886B2153C3F8000B97F6 /* appUITests.m */; };
+		A0F7887D2153D6C2000B97F6 /* MyTableVewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F7887C2153D6C2000B97F6 /* MyTableVewCell.m */; };
+		A0F7887E2153D6C2000B97F6 /* MyTableVewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F7887C2153D6C2000B97F6 /* MyTableVewCell.m */; };
+		A0F7887F2153D6C2000B97F6 /* MyTableVewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F7887C2153D6C2000B97F6 /* MyTableVewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,8 @@
 		A0F788672153C3F8000B97F6 /* appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F7886B2153C3F8000B97F6 /* appUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appUITests.m; sourceTree = "<group>"; };
 		A0F7886D2153C3F8000B97F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0F7887B2153D60F000B97F6 /* MyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		A0F7887C2153D6C2000B97F6 /* MyTableVewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableVewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +115,8 @@
 				A0F788522153C3F8000B97F6 /* LaunchScreen.storyboard */,
 				A0F788552153C3F8000B97F6 /* Info.plist */,
 				A0F788562153C3F8000B97F6 /* main.m */,
+				A0F7887C2153D6C2000B97F6 /* MyTableVewCell.m */,
+				A0F7887B2153D60F000B97F6 /* MyTableViewCell.h */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -265,6 +272,7 @@
 				A0F7884C2153C3F6000B97F6 /* ViewController.m in Sources */,
 				A0F788572153C3F8000B97F6 /* main.m in Sources */,
 				A0F788492153C3F6000B97F6 /* AppDelegate.m in Sources */,
+				A0F7887D2153D6C2000B97F6 /* MyTableVewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0F788612153C3F8000B97F6 /* appTests.m in Sources */,
+				A0F7887E2153D6C2000B97F6 /* MyTableVewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0F7886C2153C3F8000B97F6 /* appUITests.m in Sources */,
+				A0F7887F2153D6C2000B97F6 /* MyTableVewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
