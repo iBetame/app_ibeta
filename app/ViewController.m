@@ -8,29 +8,23 @@
 
 #import "ViewController.h"
 #import "MyTableViewCell.h"
+#import "AFNetworking.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad {
-    NSString * resultString = @"[{\"id\":4,\"url\":\"url4\",\"author\":\"author4\",\"title\":\"title4\",\"summary\":\"summary4\"},{\"id\":0,\"url\":null,\"author\":null,\"title\":null,\"summary\":null},{\"id\":0,\"url\":null,\"author\":null,\"title\":null,\"summary\":null},{\"id\":0,\"url\":null,\"author\":null,\"title\":null,\"summary\":null}]";
-    NSData * resultData = [resultString dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *error;
-    self.articles = [NSJSONSerialization JSONObjectWithData:resultData options:kNilOptions error:&error];
+    [super viewDidLoad];
     
-    
-    
-    self.view.backgroundColor = [UIColor redColor];
+    // Do any additional setup after loading the view, typically from a nib.
     if(self.tableView==nil){
         self.tableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
         [self.view addSubview:self.tableView];
     }
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self requestServer];
 }
-
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if(self.articles!=nil)
@@ -63,6 +57,21 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 120;
+}
+
+- (void) requestServer {
+    [[AFHTTPSessionManager manager]
+     GET:@"https://api.ibeta.me/articles"
+     parameters:nil
+     progress:nil
+     success:^(NSURLSessionDataTask * task, id responseObject){
+         NSLog(@"Success %@", responseObject);
+         self.articles = (NSArray*)responseObject;
+         [self.tableView reloadData];
+     }
+     failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+         NSLog(@"Error: %@", error);
+     }];
 }
 
 @end
